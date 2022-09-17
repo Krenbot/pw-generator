@@ -27,10 +27,31 @@ var lowercases = "abcdefghiklmnopqrsttuvwxtz" .split("");
 var numbers = "0123456789" .split("");
 var specials = "*&^%$#@!?><{}" .split("")
 
-var lowercaseConfirm = confirm ("Include lowercase?");
+var lowercaseConfirm = confirm ("Include lowercase letters?");
   if (lowercaseConfirm === true) {
     for (var i=0; i<lowercases.length; i++){
       inputs.push(lowercases[i]);
+    }
+  }
+
+  var uppercaseConfirm = confirm ("Include uppercase letters?");
+  if (lowercaseConfirm === true) {
+    for (var i=0; i<uppercases.length; i++){
+      inputs.push(uppercases[i]);
+    }
+  }
+
+  var numberConfirm = confirm ("Include numbers?");
+  if (numberConfirm === true) {
+    for (var i=0; i<numbers.length; i++){
+      inputs.push(numbers[i]);
+    }
+  }
+
+  var specialsConfirm = confirm ("Include special characters?");
+  if (specialsConfirm === true) {
+    for (var i=0; i<specials.length; i++){
+      inputs.push(specials[i]);
     }
   }
 
