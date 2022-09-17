@@ -10,5 +10,16 @@ function writePassword() {
 
 }
 
+function generatePassword() {
+  var passLength = prompt("Enter desired amount of characters")
+  var confirmLength = parseInt(passLength);
+  console.log(confirmLength)
+
+  if (passlength<8 || passLength >128 || isNaN(passLength)){
+    alert ("Invalid length - Please try again");
+    return;
+  }
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
