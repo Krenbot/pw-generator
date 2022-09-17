@@ -55,7 +55,19 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     }
   }
 
+var randPassword = "";
 
+for (var i = 0; i < confirmLength; i++) {
+    inputs[
+        Math.floor(Math.random() * inputs.length)];
+    randPassword +=
+       inputs[
+           Math.floor(Math.random() * inputs.length)
+       ];
+   }
 
-  // Add event listener to generate button
+   return randPassword();
+   
+   // Add event listener to generate button
+   
 generateBtn.addEventListener("click", writePassword);
