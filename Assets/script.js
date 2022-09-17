@@ -27,5 +27,14 @@ var lowercases = "abcdefghiklmnopqrsttuvwxtz" .split("");
 var numbers = "0123456789" .split("");
 var specials = "*&^%$#@!?><{}" .split("")
 
-// Add event listener to generate button
+var lowercaseConfirm = confirm ("Include lowercase?");
+  if (lowercaseConfirm === true) {
+    for (var i=0; i<lowercases.length; i++){
+      inputs.push(lowercases[i]);
+    }
+  }
+
+
+
+  // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
