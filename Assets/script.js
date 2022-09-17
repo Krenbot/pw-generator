@@ -21,5 +21,11 @@ function generatePassword() {
   }
 }
 
+var inputs = []
+var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+var lowercases = "abcdefghiklmnopqrsttuvwxtz" .split("");
+var numbers = "0123456789" .split("");
+var specials = "*&^%$#@!?><{}" .split("")
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
