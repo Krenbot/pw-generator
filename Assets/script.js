@@ -32,7 +32,6 @@ function generatePassword()
   if (passLength < 8 || passLength > 128 || isNaN(passLength))
   {
     alert ("Invalid length - Please try again");
-    return;
   }
 
 //Prompts user choice for lowercase/uppercase/numbers/specials...
