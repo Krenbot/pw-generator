@@ -15,11 +15,11 @@ function generatePassword() {
   var confirmLength = parseInt(passLength);
   console.log(confirmLength)
 
-  if (passlength<8 || passLength >128 || isNaN(passLength)){
+  if (passLength<8 || passLength >128 || isNaN(passLength)){
     alert ("Invalid length - Please try again");
     return;
   }
-}
+
 
 var inputs = []
 var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
@@ -35,7 +35,7 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
   }
 
   var uppercaseConfirm = confirm ("Include uppercase letters?");
-  if (lowercaseConfirm === true) {
+  if (uppercaseConfirm === true) {
     for (var i=0; i<uppercases.length; i++){
       inputs.push(uppercases[i]);
     }
@@ -66,8 +66,8 @@ for (var i = 0; i < confirmLength; i++) {
        ];
    }
 
-   return randPassword();
-   
+   return randPassword;
+  }
    // Add event listener to generate button
    
 generateBtn.addEventListener("click", writePassword);
