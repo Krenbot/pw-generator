@@ -1,4 +1,16 @@
-# 03 JavaScript: Password Generator
+# JavaScript Password Generator
+
+## Deployed URL
+
+https://krenbot.github.io/pw-generator/
+
+## Description
+A password generator that asks users for input for a combination of uppercase/lowercase/numbers, and special characters in order to generate an 8-128 character randomized password.
+
+## Technologies Uses
+* HTML
+* CSS
+* JavaScript
 
 ## User Story
 
@@ -33,3 +45,6 @@ THEN the password is either displayed in an alert or written to the page
 The following image shows the web application's appearance and functionality:
 
 ![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+
+# License
+MIT @ Krenbot
