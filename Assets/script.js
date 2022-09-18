@@ -1,5 +1,7 @@
-// Assignment Code
+// Assignment Code (Given)
 var generateBtn = document.querySelector("#generate");
+
+//Input Variables
 var inputs = []
 var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowercases = "abcdefghiklmnopqrsttuvwxtz" 
@@ -7,19 +9,22 @@ var numbers = "0123456789"
 var specials = "*&^%$#@!?><{}" 
 var randPassword = ""
 
-//Used for "Generate Password" button
+//Used for "Generate Password" button (Given)
 generateBtn.addEventListener("click", writePassword);
 
-// Write password to the #password input
+// Write password to the #password input (Given)
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
   passwordText.value = password;
 }
 
-//Function to request total length
-function generatePassword() 
+//Full PW Generation Function begin
+function generatePassword()
 {
+
+  //Function to request total length
   var passLength = prompt("Enter desired amount of characters")
   var confirmLength = parseInt(passLength);
 
