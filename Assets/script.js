@@ -7,6 +7,9 @@ var numbers = "0123456789"
 var specials = "*&^%$#@!?><{}" 
 var randPassword = ""
 
+//Used for "Generate Password" button
+generateBtn.addEventListener("click", writePassword);
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -28,7 +31,6 @@ function generatePassword()
   }
 
 //Prompts user choice for lowercase/uppercase/numbers/specials...
-
 var lowercaseConfirm = confirm ("Include lowercase letters?");
   if (lowercaseConfirm === true) {
     for (var i=0; i<lowercases.length; i++){
@@ -57,7 +59,7 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     }
   }
 
-//Compliles input choices into an array, returning random values through Math input by the length of the input array 
+//Compliles input choices into an array, returning random values through Math input by the length of the input array, returning password to the box
 for (var i = 0; i < confirmLength; i++){
     inputs[
         Math.floor(Math.random() * inputs.length)];
@@ -65,10 +67,5 @@ for (var i = 0; i < confirmLength; i++){
         randPassword += inputs[
            Math.floor(Math.random() * inputs.length)];
    }
-
    return randPassword;
-
 }
-
-  // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
