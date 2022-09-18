@@ -1,5 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var inputs = []
+var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+var lowercases = "abcdefghiklmnopqrsttuvwxtz" .split("");
+var numbers = "0123456789" .split("");
+var specials = "*&^%$#@!?><{}" .split("")
 
 // Write password to the #password input
 function writePassword() {
@@ -19,13 +24,6 @@ function generatePassword() {
     alert ("Invalid length - Please try again");
     return;
   }
-
-
-var inputs = []
-var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
-var lowercases = "abcdefghiklmnopqrsttuvwxtz" .split("");
-var numbers = "0123456789" .split("");
-var specials = "*&^%$#@!?><{}" .split("")
 
 var lowercaseConfirm = confirm ("Include lowercase letters?");
   if (lowercaseConfirm === true) {
