@@ -51,7 +51,6 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     console.log(inputs)
   }
 
-
   var numberConfirm = confirm ("Include numbers?");
   if (numberConfirm === true) {
     for (var i=0; i<numbers.length; i++){
