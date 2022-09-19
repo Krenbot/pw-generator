@@ -31,7 +31,7 @@ function generatePassword()
   //Checks for valid password length
   if (passLength < 8 || passLength > 128 || isNaN(passLength))
   {
-    alert ("Invalid length - Please try again");
+    alert ("Invalid entry - Please try again");
   }
 
 //Prompts user choice for lowercase/uppercase/numbers/specials...
@@ -40,6 +40,7 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     for (var i=0; i<lowercases.length; i++){
       inputs.push(lowercases[i]);
     }
+    console.log(inputs)
   }
 
   var uppercaseConfirm = confirm ("Include uppercase letters?");
@@ -47,13 +48,16 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     for (var i=0; i<uppercases.length; i++){
       inputs.push(uppercases[i]);
     }
+    console.log(inputs)
   }
+
 
   var numberConfirm = confirm ("Include numbers?");
   if (numberConfirm === true) {
     for (var i=0; i<numbers.length; i++){
       inputs.push(numbers[i]);
     }
+    console.log(inputs)
   }
 
   var specialsConfirm = confirm ("Include special characters?");
@@ -61,9 +65,10 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     for (var i=0; i<specials.length; i++){
       inputs.push(specials[i]);
     }
+    console.log(inputs)
   }
 
-//Compliles input choices into an array, returning random values through Math input by the length of the input array, returning password to the box
+//compiles input choices into an array, returning random values through Math input by the length of the input array, returning password to the box
 for (var i = 0; i < confirmLength; i++){
     inputs[
         Math.floor(Math.random() * inputs.length)];
