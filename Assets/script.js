@@ -25,7 +25,6 @@ function generatePassword()
 
   //Function to request total length
   var passLength = prompt("Enter desired amount of characters")
-  var confirmLength = parseInt(passLength);
 
   //Checks for valid password length
   if (passLength < 8 || passLength > 128 || isNaN(passLength))
@@ -65,6 +64,9 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
     }
     console.log(inputs)
   }
+
+//Changes passLength string to intergers
+var confirmLength = parseInt(passLength);
 
 //compiles input choices into an array, returning random values through Math input by the length of the input array, returning password to the box
 for (var i = 0; i < confirmLength; i++){
