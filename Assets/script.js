@@ -1,8 +1,8 @@
 // Assignment Code (Given)
 var generateBtn = document.querySelector("#generate");
 
-//Input Variables
-var inputs = []
+//Input Variables Global
+var inputs = [""]
 var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowercases = "abcdefghiklmnopqrsttuvwxtz" 
 var numbers = "0123456789"
@@ -16,7 +16,6 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
   passwordText.value = password;
 }
 
@@ -71,7 +70,6 @@ var lowercaseConfirm = confirm ("Include lowercase letters?");
 for (var i = 0; i < confirmLength; i++){
     inputs[
         Math.floor(Math.random() * inputs.length)];
-    
         randPassword += inputs[
            Math.floor(Math.random() * inputs.length)];
    }
