@@ -20,14 +20,12 @@ function writePassword() {
 
 function generatePassword() {
   //Function to request total length
-  var passLength = parseInt(
-    prompt("Enter desired amount of characters:")
-  )
+  var passLength = prompt("Enter desired amount of characters:")
 
   //Checks for valid password length
   if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     alert("Invalid entry - Please enter a number between 8 and 128");
-    return ""
+    return
   }
 
   //Prompts user choice for lowercase/uppercase/numbers/specials...
@@ -66,8 +64,13 @@ function generatePassword() {
   // Forces the user to select at least one character type for their password.
   if (uppercaseConfirm === false && numberConfirm === false && lowercaseConfirm === false && specialsConfirm === false) {
     alert("You must chose at least 1 type of character.")
-    return null;
+    return;
   }
+
+  var randPassword = ""
+
+  //Changes passLength string to intergers
+  const confirmLength = parseInt(passLength)
 
   //compiles input choices into an array, returning random values through Math input by the length of the input array, returning password to the box
   for (var i = 0; i < confirmLength; i++) {
