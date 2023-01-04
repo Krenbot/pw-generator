@@ -1,7 +1,7 @@
 var generateBtn = document.querySelector("#generate");
 
-//Input Variables
-var inputs = []
+//Input Variables Global
+var inputs = [""]
 var uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowercases = "abcdefghiklmnopqrsttuvwxtz"
 var numbers = "0123456789"
