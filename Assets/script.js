@@ -25,12 +25,10 @@ function generatePassword() {
     prompt("Enter desired amount of characters:")
   )
 
-  // var confirmLength = parseInt(passLength);
-
   //Checks for valid password length
   if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
     alert("Invalid entry - Please enter a number between 8 and 128");
-    return
+    return ""
   }
 
   //Prompts user choice for lowercase/uppercase/numbers/specials...
