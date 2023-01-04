@@ -15,7 +15,6 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
 
@@ -62,6 +61,12 @@ function generatePassword() {
       inputs.push(specials[i]);
     }
     console.log(inputs)
+  }
+
+  // Forces the user to select at least one character type for their password.
+  if (uppercaseConfirm === false && numberConfirm === false && lowercaseConfirm === false && specialsConfirm === false) {
+    alert("You must chose at least 1 type of character.")
+    return null;
   }
 
   //compiles input choices into an array, returning random values through Math input by the length of the input array, returning password to the box
